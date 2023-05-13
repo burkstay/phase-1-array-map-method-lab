@@ -11,6 +11,9 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-const titleCased = () => {
-  return tutorials
+function titleCased(tutorials) {
+  return tutorials.toLowerCase().split(' ').map(function(word){
+    return (word.charAt(0).toUppserCase() + word.slice(1));
+  }) .join(' ');
 }
+console.log(titleCased('what does the kayword mean?'));
